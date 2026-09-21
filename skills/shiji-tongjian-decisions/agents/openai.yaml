@@ -1,0 +1,4 @@
+interface:
+  display_name: "史鉴人生抉择"
+  short_description: "用史记与资治通鉴核源案例推演人生选择，比较当时选项、结果与隐性代价"
+  default_prompt: "请用 $shiji-tongjian-decisions 分析我的人生抉择，从指定古籍库核验相近案例，比较路径与代价，并指出历史类比的边界。"

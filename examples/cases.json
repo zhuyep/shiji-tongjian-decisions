@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "scope": [
+    "史记",
+    "资治通鉴"
+  ],
+  "status": "三条已核源演示案例；不是全书案例库",
+  "evidence_registry": "evidence.json",
+  "modern_worked_example": "promotion-decision.zh-CN.md",
+  "evidence_boundary": "登记表只证明快照中有这些字句；主张支持性经当前代理阅读核对，未作独立历史真实性鉴定",
+  "cases": [
+    {
+      "case_id": "C1",
+      "event_cluster": "yue-post-wu-fanli",
+      "title": "范蠡在越灭吴后的去留",
+      "source": {
+        "book": "史记",
+        "volume": "卷四十一",
+        "chapter": "越王勾践世家",
+        "source_id": "shiji-041"
+      },
+      "decision_point": "越灭吴、范蠡辞越之时；不与后来在齐辞相混同",
+      "scene_kernel": {
+        "tension": "旧目标实现后的地位与自主性取舍",
+        "dependency": "君主的地位安排与个人退出资源",
+        "exit": "有轻宝、随从并实际乘舟离开",
+        "modern_limit": "古代人身威胁不能映射为现代上司动机"
+      },
+      "then_known": [
+        {
+          "claim": "原文记君主同时提出分国与惩罚，以阻止离开",
+          "kind": "史料记载",
+          "evidence_ids": [
+            "F0"
+          ]
+        }
+      ],
+      "then_unknown": [
+        "离开后的经营是否成功",
+        "留下的实际后果",
+        "全部财富和家属负担"
+      ],
+      "options": [
+        {
+          "action": "留下接受君主安排",
+          "origin": "史料明载",
+          "feasibility": "君主提出，但分国承诺是否兑现未知",
+          "chosen": false,
+          "judgment": "可能保留地位只是条件性预期",
+          "evidence_ids": [
+            "F0"
+          ]
+        },
+        {
+          "action": "离开越国",
+          "origin": "史料明载",
+          "feasibility": "原文记实际实现",
+          "chosen": true,
+          "judgment": "人物表示按自己的意愿离开；正文另叙其认为不宜久居",
+          "evidence_ids": [
+            "F1",
+            "F2",
+            "F4"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "claim": "携轻宝与随从乘舟离越，原文记终不反",
+          "horizon": "即时",
+          "kind": "史料记载",
+          "evidence_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "costs": [
+        {
+          "cost": "离开既有职位与生活环境，精确经济损失未记",
+          "visibility": "显性",
+          "kind": "分析推断",
+          "basis": "由实际离开行为归纳",
+          "timing": "后来发生",
+          "bearer": "本人及同行者",
+          "reversibility": "未知",
+          "evidence_ids": [
+            "F2"
+          ]
+        },
+        {
+          "cost": "重建生活和关系网络的负担，具体程度未知",
+          "visibility": "隐性",
+          "kind": "分析推断",
+          "basis": "由迁居及转换环境推断，不能冒充原文心理记录",
+          "timing": "情景风险",
+          "bearer": "本人及同行者",
+          "reversibility": "未知",
+          "evidence_ids": [
+            "F2"
+          ]
+        }
+      ],
+      "counterfactual": {
+        "if": "选择留下",
+        "conclusion": "结局不可知，文种不能替代范蠡的未走路径",
+        "kind": "反事实假设"
+      },
+      "temporal_guard": "F3散财辞相发生在齐国，是后来节点，不能列为辞越时成本",
+      "conditional_insight": "若退出需要储备和支持，离开的理由与离开的能力应分别核实",
+      "risk_reminder": "不推出辞职必成功、骨干必受猜忌或留下必死"
+    },
+    {
+      "case_id": "C2",
+      "event_cluster": "early-han-zhangliang-role",
+      "title": "张良自限封赏与后续参与边界",
+      "source": {
+        "book": "史记",
+        "volume": "卷五十五",
+        "chapter": "留侯世家",
+        "source_id": "shiji-055"
+      },
+      "decision_point": "汉六年受封；后续事务单独观察",
+      "scene_kernel": {
+        "tension": "额外回报与参与负担",
+        "dependency": "声望和既有关系产生的事务要求",
+        "exit": "减少日常参与但仍被要求出谋",
+        "modern_limit": "封邑与皇室事务不是现代薪酬和职责"
+      },
+      "then_known": [
+        {
+          "claim": "原文记高帝提出自择齐三万户，张良表示封留足矣",
+          "kind": "史料记载",
+          "evidence_ids": [
+            "Z0",
+            "Z1"
+          ]
+        }
+      ],
+      "then_unknown": [
+        "此时是否已预见后来储位争议",
+        "不同封赏选择的后果"
+      ],
+      "options": [
+        {
+          "action": "接受自择齐三万户的提议",
+          "origin": "史料明载",
+          "feasibility": "由君主提出",
+          "chosen": false,
+          "judgment": "不推算财务现值",
+          "evidence_ids": [
+            "Z0"
+          ]
+        },
+        {
+          "action": "请求封留，不取三万户",
+          "origin": "史料明载",
+          "feasibility": "实际获准",
+          "chosen": true,
+          "judgment": "自述封留已足；降低风险属于另外的分析推断",
+          "evidence_ids": [
+            "Z1"
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "claim": "后来被吕泽强求出谋，并履行少傅事务",
+          "horizon": "后续不同节点",
+          "kind": "史料记载",
+          "evidence_ids": [
+            "Z2",
+            "Z3"
+          ]
+        }
+      ],
+      "costs": [
+        {
+          "cost": "放弃更大封赏机会；不计算差额",
+          "visibility": "显性",
+          "kind": "分析推断",
+          "basis": "拒绝三万户之言",
+          "timing": "后来发生",
+          "bearer": "本人",
+          "reversibility": "未知",
+          "evidence_ids": [
+            "Z1"
+          ]
+        },
+        {
+          "cost": "减少参与仍不能免除关系与身份带来的事务要求",
+          "visibility": "隐性",
+          "kind": "分析推断",
+          "basis": "被强求出谋和行少傅事",
+          "timing": "后来发生",
+          "bearer": "本人",
+          "reversibility": "未知",
+          "evidence_ids": [
+            "Z2",
+            "Z3"
+          ]
+        }
+      ],
+      "counterfactual": {
+        "if": "接受更大封赏",
+        "conclusion": "没有可观察的未选路径结局",
+        "kind": "反事实假设"
+      },
+      "temporal_guard": "受封、闭门、被强求出谋、后来的退隐表述按原文时序分别记",
+      "conditional_insight": "若职责依附于持续关系，少拿奖赏或减少露面并不自动形成可执行边界",
+      "risk_reminder": "不能写成完全退出政治，也不能把多病认定为装病"
+    },
+    {
+      "case_id": "C3",
+      "event_cluster": "wuqi-wei-chu-transition",
+      "title": "吴起离魏入楚及新角色的风险",
+      "source": {
+        "book": "资治通鉴",
+        "volume": "卷一",
+        "chapter": "周纪一",
+        "source_id": "tongjian-001"
+      },
+      "decision_point": "安王十五年条内追叙离魏入楚；不由排版直接断定离魏年份",
+      "scene_kernel": {
+        "tension": "离开旧风险与获得新机会",
+        "dependency": "新支持者、改革与既得利益关系",
+        "exit": "实际赴楚，其他去处可行性未知",
+        "modern_limit": "惧诛不能类比普通升职的不确定性"
+      },
+      "then_known": [
+        {
+          "claim": "原文记魏武侯生疑，吴起惧诛",
+          "kind": "史料记载",
+          "evidence_ids": [
+            "W1"
+          ]
+        }
+      ],
+      "then_unknown": [
+        "吴起是否知道叙述者所述完整谋划",
+        "新支持者何时去世",
+        "其他去处的可行性"
+      ],
+      "options": [
+        {
+          "action": "离魏赴楚",
+          "origin": "史料明载",
+          "feasibility": "实际发生",
+          "chosen": true,
+          "judgment": "惧诛是原文叙述的动因；不附加收益计算",
+          "evidence_ids": [
+            "W1"
+          ]
+        },
+        {
+          "action": "留下澄清或转往他处",
+          "origin": "分析重建",
+          "feasibility": "资料不足，不能确认可执行",
+          "chosen": false,
+          "judgment": "不是史料中已确认的完整菜单",
+          "evidence_ids": []
+        }
+      ],
+      "outcomes": [
+        {
+          "claim": "到楚后获楚悼王任为相",
+          "horizon": "离魏之后",
+          "kind": "史料记载",
+          "evidence_ids": [
+            "W4"
+          ]
+        },
+        {
+          "claim": "在楚改革后贵戚大臣多怨；悼王去世后遭攻击",
+          "horizon": "后续不同节点",
+          "kind": "史料记载",
+          "evidence_ids": [
+            "W2",
+            "W3"
+          ]
+        }
+      ],
+      "costs": [
+        {
+          "cost": "转换原有任职环境；具体财务与家属影响未记",
+          "visibility": "显性",
+          "kind": "分析推断",
+          "basis": "实际离魏赴楚",
+          "timing": "后来发生",
+          "bearer": "本人，其他承担者未知",
+          "reversibility": "未知",
+          "evidence_ids": [
+            "W1"
+          ]
+        },
+        {
+          "cost": "新支持者依赖及改革累积的反对",
+          "visibility": "隐性",
+          "kind": "分析推断",
+          "basis": "受重用、贵戚大臣多怨及悼王去世后的袭击；依赖机制为推断",
+          "timing": "后来发生",
+          "bearer": "本人及相关群体",
+          "reversibility": "未知",
+          "evidence_ids": [
+            "W4",
+            "W2",
+            "W3"
+          ]
+        }
+      ],
+      "counterfactual": {
+        "if": "未离魏",
+        "conclusion": "无法从赴楚后的遭遇倒推留魏更优",
+        "kind": "反事实假设"
+      },
+      "temporal_guard": "离魏、在楚改革、悼王去世不能压缩为一个因果箭头",
+      "conditional_insight": "若新机会依赖单一支持者，换环境仍需检查支持的持续性与权责结构",
+      "risk_reminder": "不能把改革后的长期后果归结为最初去留，或声称换环境没有用"
+    }
+  ]
+}

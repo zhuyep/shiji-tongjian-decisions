@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "library_id": "wikisource-zh-shiji-tongjian",
+  "name": "《史记》《资治通鉴》两书专用检索",
+  "selection_status": "书目由用户指定；电子文本平台按可访问性与版本证据选择",
+  "access": "在线按卷检索；本地仅缓存本次读过的片段",
+  "preferred_host": "zh.wikisource.org",
+  "alternative_host": "ctext.org",
+  "books": [
+    {"book": "史记", "source_title": "史記", "index_url": "https://zh.wikisource.org/wiki/史記", "volume_url_pattern": "https://zh.wikisource.org/wiki/史記/卷{volume:03d}", "volume_count": 130},
+    {"book": "资治通鉴", "source_title": "資治通鑑", "index_url": "https://zh.wikisource.org/wiki/資治通鑑", "volume_url_pattern": "https://zh.wikisource.org/wiki/資治通鑑/卷{volume:03d}", "volume_count": 294}
+  ],
+  "coverage": "提供两书在线入口，不代表已下载、精读或建立全部424卷的案例库",
+  "edition_status": "社区电子文本；具体底本未核实时保留未知，不能称权威校勘本",
+  "source_license_note": "保留各页面署名、固定版本链接与页面所列许可；古籍正文与现代编辑内容分辨使用",
+  "cross_source_fallback": "允许两书内跨平台核源，保留具体版本；用户另行限定底本时从其要求"
+}

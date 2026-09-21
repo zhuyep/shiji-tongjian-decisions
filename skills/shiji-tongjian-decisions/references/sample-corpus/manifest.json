@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "library_id": "wikisource-zh-shiji-tongjian",
+  "sources": [
+    {
+      "id": "shiji-041",
+      "book": "史记",
+      "volume": "卷四十一",
+      "chapter": "越王勾践世家",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=史記/卷041&oldid=2018395",
+      "edition": "维基文库不转换文本；底本未核；去除网页脚注链接标记，保留校勘括号",
+      "locator": "范蠡去越、齐再辞相与文种段；原网页抽取行153、175、177、188",
+      "coverage": "指定段落节选，非完整卷",
+      "revision": "2018395",
+      "retrieved_at": "2026-09-21T01:58:30.021971+00:00",
+      "sha256": "98df21064fe8162fc819584ed3aa5398169631f76ff23a5522137f3ddc5cb649",
+      "path": "texts/shiji-041.txt",
+      "lines": 8
+    },
+    {
+      "id": "shiji-055",
+      "book": "史记",
+      "volume": "卷五十五",
+      "chapter": "留侯世家",
+      "source_url": "https://zh.wikisource.org/w/index.php?title=史記/卷055&oldid=2666612",
+      "edition": "维基文库不转换文本；底本未核；去除网页脚注链接标记，保留校勘括号",
+      "locator": "汉六年封功臣至后八年卒；原网页抽取行158–170内10段",
+      "coverage": "指定段落节选，非完整卷",
+      "revision": "2666612",
+      "retrieved_at": "2026-09-21T01:58:30.051529+00:00",
+      "sha256": "c7180a6841aeb01653ca6c87167b6e8b4224f1ec37bda56699dedd2a146b07e5",
+      "path": "texts/shiji-055.txt",
+      "lines": 20
+    },
+    {
+      "id": "tongjian-001",
+      "book": "资治通鉴",
+      "volume": "卷一",
+      "chapter": "周纪一",
+      "source_url": "https://zh.wikisource.org/wiki/資治通鑑/卷001",
+      "edition": "维基文库不转换文本；底本未核；去除网页脚注链接标记，保留校勘括号",
+      "locator": "安王十五年条追叙与二十一年条；原网页抽取行289、329、333",
+      "coverage": "指定段落节选，非完整卷",
+      "revision": null,
+      "retrieved_at": "2026-09-21T01:58:30.079786+00:00",
+      "sha256": "993359505e9da6e02a064af50631f29ea977ec1151fd528b0c1992d4abb45460",
+      "path": "texts/tongjian-001.txt",
+      "lines": 6
+    }
+  ]
+}
