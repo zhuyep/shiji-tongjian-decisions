@@ -77,6 +77,8 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 
 ## 反馈与贡献
 
+**不安装也能反馈：**读上面的虚构晋升示例后，用[一分钟反馈表](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)告诉我们：你尝试到哪一步、哪一条判断有用或不成立、什么情况下会再用。看过示例、安装失败和实际使用会分开记录；请勿提供私人经历，表单提交后公开可见。
+
 欢迎提交[问题或使用反馈](https://github.com/zhuyep/shiji-tongjian-decisions/issues)：提供脱敏问题、引用出处、观察到的错误或遗漏，以及怎样才算改进。新增案例请同时说明不适用之处。请勿提交真实同事姓名、家庭信息或未授权材料。
 
 ```bash

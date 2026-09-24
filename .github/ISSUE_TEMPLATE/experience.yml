@@ -1,0 +1,34 @@
+name: 体验或失败反馈 / Experience or failure
+description: 看过示例即可反馈，也欢迎安装问题 / Example readers and installation failures are welcome.
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不必安装，也不必分享私人经历：可以只评价 README 中的虚构晋升示例。此表单提交后公开可见，请勿提供真实姓名、单位、健康或家庭资料、密钥及完整私人对话。不要仅凭类比作重大决定。
+        No installation or personal story is required: review the fictional promotion example in the README. Submissions are public. Do not include real names, employers, health or family details, secrets, or private chat transcripts. Historical analogy is not decision advice.
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 你尝试到哪一步？ / What did you try?
+      options:
+        - 只看公开示例 / Read the public example only
+        - 安装或启动失败 / Installation or startup failed
+        - 用虚构问题运行过 / Ran a fictional scenario
+        - 用脱敏问题运行过 / Ran a redacted scenario
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 一条具体发现或失败 / One concrete finding or failure
+      description: 哪个选择、代价或引文有用？哪里不成立？失败发生在哪一步？无需提交私人问题。 / Which option, cost or quotation helped or failed, and where? No private prompt needed.
+    validations:
+      required: true
+  - type: textarea
+    id: next-use
+    attributes:
+      label: 什么情况下你会再用？ / When would you use it again?
+      description: 不会再用也欢迎直说，并指出缺的具体帮助。 / “I would not” is useful too; say what concrete help was missing.
+    validations:
+      required: false

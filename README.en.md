@@ -59,6 +59,8 @@ The local Python tool makes no network requests. Your AI host handles prompts an
 
 ## Feedback and licensing
 
+**No installation needed:** read the fictional promotion example, then use the [one-minute feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Tell us what you tried, one useful or flawed point, and when you would use it again. Example reviews, installation failures and actual use are tracked separately. No personal story is needed; submissions are public.
+
 [Report a failure or useful result](https://github.com/zhuyep/shiji-tongjian-decisions/issues) with a redacted prompt, source location and what was missing. Specific evidence is more useful than a generic rating. A Star is welcome if the skill helped you notice an overlooked option or cost.
 
 Original code and instructions: [MIT](LICENSE). Wikisource excerpts retain their separate attribution and license in [NOTICE](NOTICE.md) and the [text license notice](skills/shiji-tongjian-decisions/references/sample-corpus/LICENSE.md). [Design influences](skills/shiji-tongjian-decisions/references/design-provenance.md) are credited; their repository snapshots are not redistributed.
