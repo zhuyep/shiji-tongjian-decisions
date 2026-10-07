@@ -6,6 +6,8 @@
 
 An Agent Skill for career moves, collaboration, commitments and conflicts between personal values. It retrieves cases from *Shiji* and *Zizhi Tongjian*, reconstructs the options and information available at the time, then examines outcomes and hidden costs. Ancient stories suggest questions to test; they do not predict your future.
 
+**Before installing:** [read the worked example in Chinese](examples/promotion-decision.zh-CN.md) and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
+
 ## Install
 
 ```bash
@@ -14,15 +16,25 @@ npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 
 For Codex, append `--agent codex`. The host must support Agent Skills; new online cases require its search or browser tools. The installer uses Node.js. The optional local quotation tool requires Python 3.10+ and no third-party Python packages.
 
-Example prompt:
+After installation, paste this fictional scenario into your assistant. You do not need to share a personal decision to try the skill:
 
 ```text
-Use $shiji-tongjian-decisions to examine this choice: …
-My priorities are …, my available options are …, and my limits are …
-Find structurally similar cases in the two books. Verify quotations,
-compare hidden costs and counterexamples, and explain where the analogy fails.
+Use $shiji-tongjian-decisions to examine this fictional scenario:
+I have been offered a promotion with higher pay, but the responsibilities,
+available resources and working hours are unclear. I prioritize family time
+and stable income and do not want a long-term commitment with unclear limits.
+Compare accepting, negotiating boundaries first, and preparing another option.
+Find structurally similar cases in Shiji and Zizhi Tongjian; verify quotations.
+Compare benefits, hidden costs, counterexamples and where each analogy fails.
+Do not infer a modern manager's motives from an ancient ruler's behavior.
+If a source cannot be verified, state the gap instead of inventing a quotation.
+End with one small next step.
 Please answer in English while preserving original Chinese quotations.
 ```
+
+Check three things in the result: does it compare all three paths; are quotations traceable or gaps explicit; and does it identify a real-world condition to check and a limit to the analogy? Fluent prose alone does not establish reliability.
+
+If it fails, [report the stage you reached](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Installation or startup failed” or “Ran a fictional scenario” and share one concrete finding or error, not a full conversation. Once familiar with the flow, replace the scenario with a redacted choice, priorities and unacceptable costs.
 
 Instructions and source texts are Chinese. English responses depend on the host model; cross-language behavior has not been independently evaluated.
 

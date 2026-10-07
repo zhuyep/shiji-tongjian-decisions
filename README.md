@@ -18,6 +18,8 @@
 
 这些对照提出需要验证的问题，不能由古代君臣关系推断现代上司的动机。完整示例包含原文、出处、反事实标签和三条现代路径；现实困境为虚构，未使用个人私密经历。
 
+**不安装也能先判断有没有用：**[读完整推演](examples/promotion-decision.zh-CN.md)，挑一条你认为有用或不成立的判断，填[具体反馈表](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)。选择“只看公开示例”即可，无需提供私人经历；提交内容公开可见。读过示例与实际运行会分开记录。
+
 ## 安装与使用
 
 需要支持 Agent Skills 的 AI 助手；在线查找新案例需要该助手有搜索或浏览能力。安装工具需要 Node.js，离线原文核验工具需要 Python 3.10+，仅使用标准库。
@@ -32,14 +34,21 @@ npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions --agent codex
 ```
 
-在助手中输入：
+完成安装后，可以直接复制下面的虚构场景到助手，不必先整理自己的私人问题：
 
 ```text
-请用 $shiji-tongjian-decisions 分析我的选择：……
-我最看重……；目前的选项是……；不能接受的代价是……。
-请从《史记》《资治通鉴》找结构相近的案例，核对原文，
-比较收益、隐性代价、反例和不适用之处，最后给出最小下一步。
+请用 $shiji-tongjian-decisions 分析这个虚构场景：
+我得到一次晋升机会，会加薪，但职责、可用资源和工时还没说清。
+我更看重家庭时间与收入稳定，不愿在边界不清时承担长期承诺。
+请比较接受、先协商边界、准备其他去向三条路径。
+从《史记》《资治通鉴》找结构相近的案例并核对原文；
+列出收益、隐性代价、反例和不适用之处，不推断现代上司的动机。
+找不到可核原文时说明缺口，不补造引文；最后给出一个最小下一步。
 ```
+
+看结果时检查三件事：是否比较了三条路径；引文是否有可核出处或明确缺口；是否指出一个值得核实的现实条件与类比失效边界。文字流畅本身不代表推演可靠。
+
+运行失败也值得记录：[反馈尝试到哪一步](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)，选择“安装或启动失败”或“用虚构问题运行过”，只写一条具体发现或错误，不必粘贴完整对话。熟悉流程后，再把场景替换为脱敏的选择、优先级和不可接受的代价。
 
 也可以下载 [Release](https://github.com/zhuyep/shiji-tongjian-decisions/releases/latest)，把 `skills/shiji-tongjian-decisions/` 放到宿主支持的技能目录。技能不需要单独 API Key；模型及联网能力由宿主提供。
 
