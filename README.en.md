@@ -34,6 +34,8 @@ Please answer in English while preserving original Chinese quotations.
 
 Check three things in the result: does it compare all three paths; are quotations traceable or gaps explicit; and does it identify a real-world condition to check and a limit to the analogy? Fluent prose alone does not establish reliability.
 
+For a repeatable post-install check, use the [six-scenario manual regression pack](evals/README.md) (Chinese prompts): changed promotion priorities, an incorrect quotation, unavailable sources, a cache miss and mixed-up chronology. Start with the promotion pair and incorrect quotation. Each scenario has a human rubric; these are unrun test inputs, not evidence that a model passed.
+
 If it fails, [report the stage you reached](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Installation or startup failed” or “Ran a fictional scenario” and share one concrete finding or error, not a full conversation. Once familiar with the flow, replace the scenario with a redacted choice, priorities and unacceptable costs.
 
 Instructions and source texts are Chinese. English responses depend on the host model; cross-language behavior has not been independently evaluated.
@@ -65,7 +67,7 @@ python3 -m unittest discover -s tests -v
 
 ## Scope and evidence
 
-The initial release includes excerpts from three volumes, three structured cases, thirteen quotations, twelve tool behavior tests and one example-evidence consistency test. One fictional scenario has a maker walkthrough. Independent evaluations, real decision outcomes and full-book retrieval coverage remain unverified.
+The repository includes excerpts from three volumes, three structured cases and thirteen registered quotations. Offline tests check tool behavior, evidence records and the quotations/source links displayed in the public Markdown example; deliberate mutations test that the checks reject corruption. Six synthetic scenarios provide manual acceptance rubrics. Automated fixture checks do not run or evaluate a model, and the model-behavior regression remains unrun. One fictional scenario has a maker walkthrough. Independent evaluations, real decision outcomes and full-book retrieval coverage remain unverified.
 
 The local Python tool makes no network requests. Your AI host handles prompts and online searches according to its own settings. Redact sensitive situations before sharing. This is a reasoning aid, not a substitute for current professional evidence.
 

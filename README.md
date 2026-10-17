@@ -48,6 +48,8 @@ npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions 
 
 看结果时检查三件事：是否比较了三条路径；引文是否有可核出处或明确缺口；是否指出一个值得核实的现实条件与类比失效边界。文字流畅本身不代表推演可靠。
 
+想检查安装后的助手是否可靠，可按[六场景自检说明](evals/README.md)复制固定输入：条件变化的晋升对照、错字引文、无源、缓存未命中和时序混淆。每题都有人工验收标准；它们是待运行的测试题，不是模型已经通过的结果。先跑晋升对照与错字题，就能检查是否机械套用建议或误认引文。
+
 运行失败也值得记录：[反馈尝试到哪一步](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)，选择“安装或启动失败”或“用虚构问题运行过”，只写一条具体发现或错误，不必粘贴完整对话。熟悉流程后，再把场景替换为脱敏的选择、优先级和不可接受的代价。
 
 也可以下载 [Release](https://github.com/zhuyep/shiji-tongjian-decisions/releases/latest)，把 `skills/shiji-tongjian-decisions/` 放到宿主支持的技能目录。技能不需要单独 API Key；模型及联网能力由宿主提供。
@@ -78,7 +80,8 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 ## 当前完成度
 
 - 三卷的选段缓存、三个结构化演示案例、十三条原文短引。
-- 十二项原有工具行为测试，加一项公开示例的证据一致性测试。
+- 离线工具测试、证据登记与公开 Markdown 引文/来源一致性检查，并用故意改字、错绑 ID、错改出处等变异验证检查会失败。
+- 六个虚构场景及人工验收标准；自动测试只校验夹具和原文基准，尚未完成模型行为回归。
 - 一条虚构困境的制作代理走读；尚无独立真人评价与真实决策效果验证。
 - 没有完成两书全文精读、全书案例抽取或全书检索召回率评测。
 

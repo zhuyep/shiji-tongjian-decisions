@@ -81,6 +81,13 @@ class CorpusBehavior(unittest.TestCase):
         self.assertEqual(code, 2)
         self.assertIn('unknown_source', d['error'])
 
+    def test_unavailable_corpus_is_explicit(self):
+        (self.root / 'manifest.json').unlink()
+        code, d = self.run_tool('verify', '--id', 'shiji-041', '--quote', '君行令，臣行意。')
+        self.assertEqual((code, d['status']), (2, 'error'))
+        self.assertIn('corpus_unavailable', d['error'])
+        self.assertNotIn('source_quote', d)
+
     def test_read_only_verification(self):
         before = {str(p.relative_to(self.root)): p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
         self.run_tool('search', '--term', '留侯')
