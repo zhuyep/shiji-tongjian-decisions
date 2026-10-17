@@ -107,7 +107,10 @@
       },
       "temporal_guard": "F3散财辞相发生在齐国，是后来节点，不能列为辞越时成本",
       "conditional_insight": "若退出需要储备和支持，离开的理由与离开的能力应分别核实",
-      "risk_reminder": "不推出辞职必成功、骨干必受猜忌或留下必死"
+      "risk_reminder": "不推出辞职必成功、骨干必受猜忌或留下必死",
+      "worked_example_evidence_ids": [
+        "F2"
+      ]
     },
     {
       "case_id": "C2",
@@ -207,7 +210,12 @@
       },
       "temporal_guard": "受封、闭门、被强求出谋、后来的退隐表述按原文时序分别记",
       "conditional_insight": "若职责依附于持续关系，少拿奖赏或减少露面并不自动形成可执行边界",
-      "risk_reminder": "不能写成完全退出政治，也不能把多病认定为装病"
+      "risk_reminder": "不能写成完全退出政治，也不能把多病认定为装病",
+      "worked_example_evidence_ids": [
+        "Z1",
+        "Z2",
+        "Z3"
+      ]
     },
     {
       "case_id": "C3",
@@ -314,7 +322,12 @@
       },
       "temporal_guard": "离魏、在楚改革、悼王去世不能压缩为一个因果箭头",
       "conditional_insight": "若新机会依赖单一支持者，换环境仍需检查支持的持续性与权责结构",
-      "risk_reminder": "不能把改革后的长期后果归结为最初去留，或声称换环境没有用"
+      "risk_reminder": "不能把改革后的长期后果归结为最初去留，或声称换环境没有用",
+      "worked_example_evidence_ids": [
+        "W1",
+        "W2",
+        "W3"
+      ]
     }
   ]
 }

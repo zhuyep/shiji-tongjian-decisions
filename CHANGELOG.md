@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add six synthetic manual regression scenarios with explicit tool conditions, acceptance criteria and a result-recording guide. Offline fixture checks do not demonstrate model behavior.
+- Bind the public worked example's displayed quotations to evidence IDs and validate its actual Markdown text and source links against the registry. Add adversarial mutation checks.
+- Keep the skill instructions unchanged pending actual behavior evaluations.
+
 ## v0.1.0 — 2026-09-21
 
 - Publish the Chinese decision-comparison skill for *Shiji* and *Zizhi Tongjian*.
