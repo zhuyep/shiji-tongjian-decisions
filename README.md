@@ -6,7 +6,13 @@
 
 引文可离线核验；找不到出处就明说缺口，不编造引文。见[离线核验一分钟上手](#离线核验一分钟上手)（`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify`）或[完整示例](examples/promotion-decision.zh-CN.md)。
 
-[English](README.en.md) · [完整示例](examples/promotion-decision.zh-CN.md) · [技能入口](skills/shiji-tongjian-decisions/SKILL.md) · [首版发布](https://github.com/zhuyep/shiji-tongjian-decisions/releases/tag/v0.1.0)
+[English](README.en.md) · [示例索引](examples/README.md) · [完整示例](examples/promotion-decision.zh-CN.md) · [技能入口](skills/shiji-tongjian-decisions/SKILL.md) · [首版发布](https://github.com/zhuyep/shiji-tongjian-decisions/releases/tag/v0.1.0)
+
+## 30 秒判断值不值得
+
+- 引文可离线核验；找不到出处就明说缺口，不编造引文。
+- 不安装也能先读[完整示例](examples/promotion-decision.zh-CN.md)；更多入口见[示例索引](examples/README.md)。
+- 需要时一行安装：`npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 ## 先看一次推演
 

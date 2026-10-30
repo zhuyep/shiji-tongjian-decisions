@@ -4,11 +4,17 @@
 
 Quotations can be checked offline; if a source cannot be found, state the gap and do not invent a quote. See the one-minute `python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify` flow in the [Chinese README](README.md), or the [worked example](examples/promotion-decision.zh-CN.md).
 
-[中文](README.md) · [Worked example in Chinese](examples/promotion-decision.zh-CN.md) · [Skill](skills/shiji-tongjian-decisions/SKILL.md)
+[中文](README.md) · [Examples index](examples/README.md) · [Worked example in Chinese](examples/promotion-decision.zh-CN.md) · [Skill](skills/shiji-tongjian-decisions/SKILL.md)
 
 An Agent Skill for career moves, collaboration, commitments and conflicts between personal values. It retrieves cases from *Shiji* and *Zizhi Tongjian*, reconstructs the options and information available at the time, then examines outcomes and hidden costs. Ancient stories suggest questions to test; they do not predict your future.
 
 **Before installing:** [read the worked example in Chinese](examples/promotion-decision.zh-CN.md) and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
+
+## 30-second fit check
+
+- Quotations can be checked offline; if a source cannot be found, state the gap—do not invent a quote.
+- Try without installing: read the [worked example](examples/promotion-decision.zh-CN.md); more entry points in the [examples index](examples/README.md).
+- One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 ## Install
 
