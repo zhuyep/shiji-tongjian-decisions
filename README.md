@@ -4,6 +4,8 @@
 
 一个有出处、有反例、有适用边界的 Agent Skill。围绕去留、转型、合作与承诺，比较当时可选的路径、后来发生的结果，以及由谁承担代价。
 
+引文可离线核验；找不到出处就明说缺口，不编造引文。见[离线核验一分钟上手](#离线核验一分钟上手)（`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify`）或[完整示例](examples/promotion-decision.zh-CN.md)。
+
 [English](README.en.md) · [完整示例](examples/promotion-decision.zh-CN.md) · [技能入口](skills/shiji-tongjian-decisions/SKILL.md) · [首版发布](https://github.com/zhuyep/shiji-tongjian-decisions/releases/tag/v0.1.0)
 
 ## 先看一次推演
