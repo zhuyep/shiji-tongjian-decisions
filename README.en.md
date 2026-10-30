@@ -2,6 +2,8 @@
 
 **Explore a difficult choice through historical decisions—with sources, costs and limits.**
 
+Quotations can be checked offline; if a source cannot be found, state the gap and do not invent a quote. See the one-minute `python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify` flow in the [Chinese README](README.md), or the [worked example](examples/promotion-decision.zh-CN.md).
+
 [中文](README.md) · [Worked example in Chinese](examples/promotion-decision.zh-CN.md) · [Skill](skills/shiji-tongjian-decisions/SKILL.md)
 
 An Agent Skill for career moves, collaboration, commitments and conflicts between personal values. It retrieves cases from *Shiji* and *Zizhi Tongjian*, reconstructs the options and information available at the time, then examines outcomes and hidden costs. Ancient stories suggest questions to test; they do not predict your future.
