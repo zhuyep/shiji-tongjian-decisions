@@ -1,18 +1,33 @@
 # Decisions through Shiji & Zizhi Tongjian
 
-**Explore a difficult choice through historical decisions—with sources, costs and limits.**
+[![skills.sh](https://skills.sh/b/zhuyep/shiji-tongjian-decisions)](https://skills.sh/zhuyep/shiji-tongjian-decisions)
 
-Quotations can be checked offline; if a source cannot be found, state the gap and do not invent a quote. See the one-minute `python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify` flow in the [Chinese README](README.md), or the [examples index](examples/README.md) (promotion / job-switch).
+**Explore a difficult choice through historical decisions—with sources, costs, limits, and offline-checkable citations.**
+
+An Agent Skill for career moves, collaboration, commitments and conflicts between personal values. It retrieves cases from *Shiji* and *Zizhi Tongjian*, reconstructs the options and information available at the time, then examines outcomes and hidden costs. If a source cannot be found, state the gap—do not invent a quote. Ancient stories suggest questions to test; they do not predict your future.
 
 [中文](README.md) · [Examples index](examples/README.md) · [Promotion example](examples/promotion-decision.zh-CN.md) · [Job-switch example](examples/job-switch-decision.zh-CN.md) · [Skill](skills/shiji-tongjian-decisions/SKILL.md)
 
-An Agent Skill for career moves, collaboration, commitments and conflicts between personal values. It retrieves cases from *Shiji* and *Zizhi Tongjian*, reconstructs the options and information available at the time, then examines outcomes and hidden costs. Ancient stories suggest questions to test; they do not predict your future.
+## 30-second verify: before / after
+
+| Step | What you see |
+| --- | --- |
+| **Before** | An assistant casually cites `shiji-041` / `君行令，臣行意。`—looks sourced, but has not been checked against the local corpus. |
+| **Verify** | From a clone, run the same one-liner as in [Try quotation verification](#try-quotation-verification) (identical to the Chinese README offline section): |
+| **After** | Returns `status: exact` (with offset and context). Change one character → no longer `exact`. Missing from the corpus → state the gap; do not invent a quote. |
+
+```bash
+python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
+  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
+  --library-id wikisource-zh-shiji-tongjian \
+  --id shiji-041 --quote '君行令，臣行意。'
+```
 
 **Before installing:** read a [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) worked example in Chinese and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
 
 ## 30-second fit check
 
-- Quotations can be checked offline; if a source cannot be found, state the gap—do not invent a quote.
+- **Offline-checkable citations**; if a source cannot be found, state the gap—do not invent a quote.
 - Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) example; more entry points in the [examples index](examples/README.md).
 - One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 

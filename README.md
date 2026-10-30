@@ -1,16 +1,31 @@
 # 史鉴人生抉择
 
-**把现实中的进退两难，放回《史记》《资治通鉴》的决策现场。**
+[![skills.sh](https://skills.sh/b/zhuyep/shiji-tongjian-decisions)](https://skills.sh/zhuyep/shiji-tongjian-decisions)
 
-一个有出处、有反例、有适用边界的 Agent Skill。围绕去留、转型、合作与承诺，比较当时可选的路径、后来发生的结果，以及由谁承担代价。
+**把现实中的进退两难，放回《史记》《资治通鉴》的决策现场。引文可离线核验。**
 
-引文可离线核验；找不到出处就明说缺口，不编造引文。见[离线核验一分钟上手](#离线核验一分钟上手)（`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify`）或[示例索引](examples/README.md)（晋升 / 跳槽）。
+一个有出处、有反例、有适用边界的 Agent Skill。围绕去留、转型、合作与承诺，比较当时可选的路径、后来发生的结果，以及由谁承担代价。找不到出处就明说缺口，不编造引文。
 
 [English](README.en.md) · [示例索引](examples/README.md) · [晋升示例](examples/promotion-decision.zh-CN.md) · [跳槽示例](examples/job-switch-decision.zh-CN.md) · [技能入口](skills/shiji-tongjian-decisions/SKILL.md) · [首版发布](https://github.com/zhuyep/shiji-tongjian-decisions/releases/tag/v0.1.0)
 
+## 30 秒核源：前后对比
+
+| 步骤 | 你会看到什么 |
+| --- | --- |
+| **前** | 助手随口抛出「出处：`shiji-041`，引文：`君行令，臣行意。`」——看起来像有据，但还没对着语料核过。 |
+| **核** | 克隆后跑仓库自带的同一条命令（与[离线核验一分钟上手](#离线核验一分钟上手)相同）： |
+| **后** | 返回 `status: exact`（含偏移与上下文）。改一个字再跑 → 不再是 `exact`；语料里没有就明说缺口，不编造。 |
+
+```bash
+python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
+  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
+  --library-id wikisource-zh-shiji-tongjian \
+  --id shiji-041 --quote '君行令，臣行意。'
+```
+
 ## 30 秒判断值不值得
 
-- 引文可离线核验；找不到出处就明说缺口，不编造引文。
+- **引文可离线核验**；找不到出处就明说缺口，不编造引文。
 - 不安装也能先读[晋升](examples/promotion-decision.zh-CN.md)或[跳槽](examples/job-switch-decision.zh-CN.md)完整示例；入口见[示例索引](examples/README.md)。
 - 需要时一行安装：`npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
