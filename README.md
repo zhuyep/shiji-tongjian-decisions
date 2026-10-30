@@ -2,11 +2,15 @@
 
 [![skills.sh](https://skills.sh/b/zhuyep/shiji-tongjian-decisions)](https://skills.sh/zhuyep/shiji-tongjian-decisions)
 
-**把现实中的进退两难，放回《史记》《资治通鉴》的决策现场。引文可离线核验。**
+**类比可以假，引文不能假。** 把跳槽/晋升放回《史记》《资治通鉴》比路径与代价；语料引文可离线核验。
 
-一个有出处、有反例、有适用边界的 Agent Skill。围绕去留、转型、合作与承诺，比较当时可选的路径、后来发生的结果，以及由谁承担代价。找不到出处就明说缺口，不编造引文。
+```bash
+npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
+```
 
-[English](README.en.md) · [示例索引](examples/README.md) · [晋升示例](examples/promotion-decision.zh-CN.md) · [跳槽示例](examples/job-switch-decision.zh-CN.md) · [技能入口](skills/shiji-tongjian-decisions/SKILL.md) · [首版发布](https://github.com/zhuyep/shiji-tongjian-decisions/releases/tag/v0.1.0)
+不装先看：[跳槽完整示例](examples/job-switch-decision.zh-CN.md) · [晋升完整示例](examples/promotion-decision.zh-CN.md) · [English](README.en.md)
+
+---
 
 ## 30 秒核源：前后对比
 

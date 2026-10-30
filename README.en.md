@@ -1,12 +1,16 @@
-# Decisions through Shiji & Zizhi Tongjian
+# 史鉴 · Historical Decision Skill
 
 [![skills.sh](https://skills.sh/b/zhuyep/shiji-tongjian-decisions)](https://skills.sh/zhuyep/shiji-tongjian-decisions)
 
-**Explore a difficult choice through historical decisions—with sources, costs, limits, and offline-checkable citations.**
+**Analogy can be wrong; citations cannot.** Map career stay/leave choices onto *Shiji* / *Zizhi Tongjian* paths and costs; quotes are offline-verifiable.
 
-An Agent Skill for career moves, collaboration, commitments and conflicts between personal values. It retrieves cases from *Shiji* and *Zizhi Tongjian*, reconstructs the options and information available at the time, then examines outcomes and hidden costs. If a source cannot be found, state the gap—do not invent a quote. Ancient stories suggest questions to test; they do not predict your future.
+```bash
+npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
+```
 
-[中文](README.md) · [Examples index](examples/README.md) · [Promotion example](examples/promotion-decision.zh-CN.md) · [Job-switch example](examples/job-switch-decision.zh-CN.md) · [Skill](skills/shiji-tongjian-decisions/SKILL.md)
+No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [中文](README.md)
+
+---
 
 ## 30-second verify: before / after
 
