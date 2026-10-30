@@ -1,0 +1,10 @@
+{
+  "name": "shiji-tongjian-decisions",
+  "version": "0.1.0",
+  "description": "Source-grounded life/career decisions from Shiji and Zizhi Tongjian with offline-checkable citations.",
+  "author": { "name": "zhuyep" },
+  "license": "MIT",
+  "keywords": ["agent-skill", "chinese-history", "decision-making", "shiji"],
+  "homepage": "https://github.com/zhuyep/shiji-tongjian-decisions",
+  "repository": "https://github.com/zhuyep/shiji-tongjian-decisions"
+}
