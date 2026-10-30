@@ -42,6 +42,18 @@ Honest limits (analogies may fail; citations must not be invented):
 - Do not force an analogy when the scenario and the historical source are not comparable.
 - Do not use it if you only want a slogan and not a comparison of paths and costs.
 
+
+## How this differs from generic “history wisdom”
+
+| | Common history quips | 史鉴 (this skill) |
+| --- | --- | --- |
+| Citations | Often verbal, hard to check | **Offline-verifiable**; gaps stated, never invented |
+| Output | One moral / hero story | **Paths × costs × counterexamples × fit bounds** |
+| Analogy | Past = present | **Analogy can be wrong**; only flag checkable conditions |
+| When not to use | Rarely written | Explicit “when not to use” list in the README |
+
+30-second proof: after clone, run the verify command above — expect `status: exact`.
+
 ## Install
 
 ```bash

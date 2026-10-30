@@ -29,6 +29,18 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 - 不安装也能先读[晋升](examples/promotion-decision.zh-CN.md)或[跳槽](examples/job-switch-decision.zh-CN.md)完整示例；入口见[示例索引](examples/README.md)。
 - 需要时一行安装：`npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
+
+## 和其他「历史智慧」有什么不同
+
+| | 常见史例鸡汤 | 史鉴 |
+| --- | --- | --- |
+| 引文 | 常口头引用、难核对 | **可离线核验**；缺口明说，不编造 |
+| 输出 | 一句道理 / 榜样故事 | **路径 × 代价 × 反例 × 适用边界** |
+| 类比 | 古今直接画等号 | **类比可以假**；只提可核实的现实条件 |
+| 不该用时 | 很少写清 | README 有「何时不该用」清单 |
+
+30 秒自证：克隆后跑上方核源命令，应得到 `status: exact`。
+
 ## 先看一次推演
 
 > 晋升会加薪，但职责、资源和工时都没有说清。我更看重家庭时间与收入稳定。接受、协商边界，还是准备离开？
