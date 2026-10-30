@@ -31,6 +31,17 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 - Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) example; more entry points in the [examples index](examples/README.md).
 - One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
+
+## When not to use this skill
+
+Honest limits (analogies may fail; citations must not be invented):
+
+- Do not use it for fortune-telling, fate, or “what is destined to happen.”
+- Do not use it for precise modern legal, medical, or financial advice—it is not a substitute for professionals.
+- Do not invent a source when the corpus has no reliable quotation; state the gap or stop.
+- Do not force an analogy when the scenario and the historical source are not comparable.
+- Do not use it if you only want a slogan and not a comparison of paths and costs.
+
 ## Install
 
 ```bash

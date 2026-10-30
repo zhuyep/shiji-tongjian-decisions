@@ -43,6 +43,17 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 
 **不安装也能先判断有没有用：**读[晋升](examples/promotion-decision.zh-CN.md)或[跳槽](examples/job-switch-decision.zh-CN.md)完整推演，挑一条你认为有用或不成立的判断，填[具体反馈表](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)。选择“只看公开示例”即可，无需提供私人经历；提交内容公开可见。读过示例与实际运行会分开记录。
 
+
+## 何时不该用史鉴
+
+诚实边界（类比可以假，引文不能假）：
+
+- 要算命、宿命或「注定会怎样」的结论时，别用。
+- 需要精确的现代法律、医疗或财务建议时，别用——这不是专业咨询替代品。
+- 语料里查不到可靠引文、只能编造出处时，别用；应标缺口或停，不补造引文。
+- 场景与史源完全不可比、只能硬凑类比时，别用。
+- 只想要一句鸡汤、不要路径与代价表时，别用。
+
 ## 安装与使用
 
 需要支持 Agent Skills 的 AI 助手；在线查找新案例需要该助手有搜索或浏览能力。安装工具需要 Node.js，离线原文核验工具需要 Python 3.10+，仅使用标准库。
