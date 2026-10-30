@@ -2,18 +2,18 @@
 
 **Explore a difficult choice through historical decisions—with sources, costs and limits.**
 
-Quotations can be checked offline; if a source cannot be found, state the gap and do not invent a quote. See the one-minute `python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify` flow in the [Chinese README](README.md), or the [worked example](examples/promotion-decision.zh-CN.md).
+Quotations can be checked offline; if a source cannot be found, state the gap and do not invent a quote. See the one-minute `python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify` flow in the [Chinese README](README.md), or the [examples index](examples/README.md) (promotion / job-switch).
 
-[中文](README.md) · [Examples index](examples/README.md) · [Worked example in Chinese](examples/promotion-decision.zh-CN.md) · [Skill](skills/shiji-tongjian-decisions/SKILL.md)
+[中文](README.md) · [Examples index](examples/README.md) · [Promotion example](examples/promotion-decision.zh-CN.md) · [Job-switch example](examples/job-switch-decision.zh-CN.md) · [Skill](skills/shiji-tongjian-decisions/SKILL.md)
 
 An Agent Skill for career moves, collaboration, commitments and conflicts between personal values. It retrieves cases from *Shiji* and *Zizhi Tongjian*, reconstructs the options and information available at the time, then examines outcomes and hidden costs. Ancient stories suggest questions to test; they do not predict your future.
 
-**Before installing:** [read the worked example in Chinese](examples/promotion-decision.zh-CN.md) and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
+**Before installing:** read a [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) worked example in Chinese and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
 
 ## 30-second fit check
 
 - Quotations can be checked offline; if a source cannot be found, state the gap—do not invent a quote.
-- Try without installing: read the [worked example](examples/promotion-decision.zh-CN.md); more entry points in the [examples index](examples/README.md).
+- Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) example; more entry points in the [examples index](examples/README.md).
 - One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 ## Install
@@ -81,7 +81,7 @@ The local Python tool makes no network requests. Your AI host handles prompts an
 
 ## Feedback and licensing
 
-**No installation needed:** read the fictional promotion example, then use the [one-minute feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Tell us what you tried, one useful or flawed point, and when you would use it again. Example reviews, installation failures and actual use are tracked separately. No personal story is needed; submissions are public.
+**No installation needed:** read a fictional promotion or job-switch example, then use the [one-minute feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Tell us what you tried, one useful or flawed point, and when you would use it again. Example reviews, installation failures and actual use are tracked separately. No personal story is needed; submissions are public.
 
 [Report a failure or useful result](https://github.com/zhuyep/shiji-tongjian-decisions/issues) with a redacted prompt, source location and what was missing. Specific evidence is more useful than a generic rating. A Star is welcome if the skill helped you notice an overlooked option or cost.
 

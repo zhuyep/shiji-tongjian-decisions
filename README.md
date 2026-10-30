@@ -4,14 +4,14 @@
 
 一个有出处、有反例、有适用边界的 Agent Skill。围绕去留、转型、合作与承诺，比较当时可选的路径、后来发生的结果，以及由谁承担代价。
 
-引文可离线核验；找不到出处就明说缺口，不编造引文。见[离线核验一分钟上手](#离线核验一分钟上手)（`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify`）或[完整示例](examples/promotion-decision.zh-CN.md)。
+引文可离线核验；找不到出处就明说缺口，不编造引文。见[离线核验一分钟上手](#离线核验一分钟上手)（`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify`）或[示例索引](examples/README.md)（晋升 / 跳槽）。
 
-[English](README.en.md) · [示例索引](examples/README.md) · [完整示例](examples/promotion-decision.zh-CN.md) · [技能入口](skills/shiji-tongjian-decisions/SKILL.md) · [首版发布](https://github.com/zhuyep/shiji-tongjian-decisions/releases/tag/v0.1.0)
+[English](README.en.md) · [示例索引](examples/README.md) · [晋升示例](examples/promotion-decision.zh-CN.md) · [跳槽示例](examples/job-switch-decision.zh-CN.md) · [技能入口](skills/shiji-tongjian-decisions/SKILL.md) · [首版发布](https://github.com/zhuyep/shiji-tongjian-decisions/releases/tag/v0.1.0)
 
 ## 30 秒判断值不值得
 
 - 引文可离线核验；找不到出处就明说缺口，不编造引文。
-- 不安装也能先读[完整示例](examples/promotion-decision.zh-CN.md)；更多入口见[示例索引](examples/README.md)。
+- 不安装也能先读[晋升](examples/promotion-decision.zh-CN.md)或[跳槽](examples/job-switch-decision.zh-CN.md)完整示例；入口见[示例索引](examples/README.md)。
 - 需要时一行安装：`npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 ## 先看一次推演
@@ -26,7 +26,7 @@
 
 这些对照提出需要验证的问题，不能由古代君臣关系推断现代上司的动机。完整示例包含原文、出处、反事实标签和三条现代路径；现实困境为虚构，未使用个人私密经历。
 
-**不安装也能先判断有没有用：**[读完整推演](examples/promotion-decision.zh-CN.md)，挑一条你认为有用或不成立的判断，填[具体反馈表](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)。选择“只看公开示例”即可，无需提供私人经历；提交内容公开可见。读过示例与实际运行会分开记录。
+**不安装也能先判断有没有用：**读[晋升](examples/promotion-decision.zh-CN.md)或[跳槽](examples/job-switch-decision.zh-CN.md)完整推演，挑一条你认为有用或不成立的判断，填[具体反馈表](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)。选择“只看公开示例”即可，无需提供私人经历；提交内容公开可见。读过示例与实际运行会分开记录。
 
 ## 安装与使用
 
@@ -97,7 +97,7 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 
 ## 反馈与贡献
 
-**不安装也能反馈：**读上面的虚构晋升示例后，用[一分钟反馈表](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)告诉我们：你尝试到哪一步、哪一条判断有用或不成立、什么情况下会再用。看过示例、安装失败和实际使用会分开记录；请勿提供私人经历，表单提交后公开可见。
+**不安装也能反馈：**读上面的虚构晋升或跳槽示例后，用[一分钟反馈表](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml)告诉我们：你尝试到哪一步、哪一条判断有用或不成立、什么情况下会再用。看过示例、安装失败和实际使用会分开记录；请勿提供私人经历，表单提交后公开可见。
 
 欢迎提交[问题或使用反馈](https://github.com/zhuyep/shiji-tongjian-decisions/issues)：提供脱敏问题、引用出处、观察到的错误或遗漏，以及怎样才算改进。新增案例请同时说明不适用之处。请勿提交真实同事姓名、家庭信息或未授权材料。
 
