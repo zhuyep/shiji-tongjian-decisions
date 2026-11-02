@@ -10,8 +10,9 @@ Short bilingual index. Read without installing; verify quotes offline; leave one
 | --- | --- |
 | [promotion-decision.zh-CN.md](promotion-decision.zh-CN.md) | 晋升 / 维持边界 / 准备离开（虚构困境 + 真实原文） |
 | [job-switch-decision.zh-CN.md](job-switch-decision.zh-CN.md) | 留下 / 内部协商设期限 / 接受外部机会（虚构困境 + 真实原文） |
+| [verify-flip.zh-CN.md](verify-flip.zh-CN.md) | 核源翻车→exact（发现向：正确引文 vs 故意改一字） |
 
-**Try without install · 不安装先看：** open a [promotion](promotion-decision.zh-CN.md) or [job-switch](job-switch-decision.zh-CN.md) example, pick one useful or flawed judgment, then use the [experience feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml) (choose “只看公开示例” / “Read the public example only”). Submissions are public; no personal story needed.
+**Try without install · 不安装先看：** open a [promotion](promotion-decision.zh-CN.md), [job-switch](job-switch-decision.zh-CN.md), or [verify-flip](verify-flip.zh-CN.md) (核源前后对比) example, pick one useful or flawed judgment, then use the [experience feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml) (choose “只看公开示例” / “Read the public example only”). Submissions are public; no personal story needed.
 
 **Offline verify · 离线核验：** after cloning, use the one-liner in the [Chinese README](../README.md#离线核验一分钟上手) (`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify …`). Exact match ≠ historical truth; gaps stay explicit.
 

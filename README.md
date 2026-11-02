@@ -8,7 +8,7 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
-不装先看：[跳槽完整示例](examples/job-switch-decision.zh-CN.md) · [晋升完整示例](examples/promotion-decision.zh-CN.md) · [English](README.en.md)
+不装先看：[跳槽完整示例](examples/job-switch-decision.zh-CN.md) · [晋升完整示例](examples/promotion-decision.zh-CN.md) · [核源翻车→exact](examples/verify-flip.zh-CN.md) · [English](README.en.md)
 
 ---
 
@@ -27,10 +27,12 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
   --id shiji-041 --quote '君行令，臣行意。'
 ```
 
+可分享对照（正确引文 vs 故意改一字）：[核源翻车→exact](examples/verify-flip.zh-CN.md)。
+
 ## 30 秒判断值不值得
 
 - **引文可离线核验**；找不到出处就明说缺口，不编造引文。
-- 不安装也能先读[晋升](examples/promotion-decision.zh-CN.md)或[跳槽](examples/job-switch-decision.zh-CN.md)完整示例；入口见[示例索引](examples/README.md)。
+- 不安装也能先读[晋升](examples/promotion-decision.zh-CN.md)或[跳槽](examples/job-switch-decision.zh-CN.md)完整示例，或看[核源翻车演示](examples/verify-flip.zh-CN.md)；入口见[示例索引](examples/README.md)。
 - 需要时一行安装：`npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 
