@@ -8,7 +8,7 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
-No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [中文](README.md)
+No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [verify-flip demo](examples/verify-flip.zh-CN.md) · [中文](README.md)
 
 ---
 
@@ -27,12 +27,14 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
   --id shiji-041 --quote '君行令，臣行意。'
 ```
 
+Shareable before/after (exact vs one-character flip): [verify-flip demo](examples/verify-flip.zh-CN.md).
+
 **Before installing:** read a [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) worked example in Chinese and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
 
 ## 30-second fit check
 
 - **Offline-checkable citations**; if a source cannot be found, state the gap—do not invent a quote.
-- Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) example; more entry points in the [examples index](examples/README.md).
+- Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md) or [job-switch](examples/job-switch-decision.zh-CN.md) example, or the [verify-flip](examples/verify-flip.zh-CN.md) discovery demo; more entry points in the [examples index](examples/README.md).
 - One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 

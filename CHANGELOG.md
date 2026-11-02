@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Docs: discovery demo `examples/verify-flip.zh-CN.md` — exact vs one-character flip on `shiji-041` (deep-linked from README zh/en).
 - Docs: optional paid single-session coaching one-pager (`docs/paid-trial-onepager.md`) — MIT skill stays free; price/deliverable/payment-recon steps for the ¥299 trial.
 - Docs: README zh/en contrast table vs generic history quips (discovery).
 
