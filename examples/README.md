@@ -12,8 +12,9 @@ Short bilingual index. Read without installing; verify quotes offline; leave one
 | [job-switch-decision.zh-CN.md](job-switch-decision.zh-CN.md) | 留下 / 内部协商设期限 / 接受外部机会（虚构困境 + 真实原文） |
 | [verify-flip.zh-CN.md](verify-flip.zh-CN.md) | 核源翻车→exact（发现向：正确引文 vs 故意改一字） |
 | [partner-commitment-decision.zh-CN.md](partner-commitment-decision.zh-CN.md) | 立刻入伙 / 先谈书面边界与退出 / 婉拒保留（虚构困境 + 真实原文） |
+| [verify-normalized.zh-CN.md](verify-normalized.zh-CN.md) | normalized_only 不是 exact（发现向：只改标点 / 去标点仍不能当逐字核验） |
 
-**Try without install · 不安装先看：** open a [promotion](promotion-decision.zh-CN.md), [job-switch](job-switch-decision.zh-CN.md), [partner-commitment](partner-commitment-decision.zh-CN.md), or [verify-flip](verify-flip.zh-CN.md) (核源前后对比) example, pick one useful or flawed judgment, then use the [experience feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml) (choose “只看公开示例” / “Read the public example only”). Submissions are public; no personal story needed.
+**Try without install · 不安装先看：** open a [promotion](promotion-decision.zh-CN.md), [job-switch](job-switch-decision.zh-CN.md), [partner-commitment](partner-commitment-decision.zh-CN.md), [verify-flip](verify-flip.zh-CN.md) (改字翻车), or [verify-normalized](verify-normalized.zh-CN.md) (标点近似≠exact) example, pick one useful or flawed judgment, then use the [experience feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml) (choose “只看公开示例” / “Read the public example only”). Submissions are public; no personal story needed.
 
 **Offline verify · 离线核验：** after cloning, use the one-liner in the [Chinese README](../README.md#离线核验一分钟上手) (`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify …`). Exact match ≠ historical truth; gaps stay explicit.
 
