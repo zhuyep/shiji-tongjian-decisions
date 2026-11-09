@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Docs: discovery demo `examples/verify-wrong-id.zh-CN.md` — a genuine quotation bound to the wrong registered `--id` is not `exact` (`not_found`, exit 1; deep-linked from README zh/en, examples index, verify-flip, and verify-normalized).
 - Docs: discovery demo `examples/verify-normalized.zh-CN.md` — `normalized_only` is not `exact` (punctuation / de-punctuated hit; deep-linked from README zh/en, examples index, and verify-flip).
 - Docs: discovery worked example `examples/partner-commitment-decision.zh-CN.md` — partnership / long-term commitment paths (accept / written exit boundaries / decline with optionality); deep-linked from README zh/en and examples index.
 - Docs: discovery demo `examples/verify-flip.zh-CN.md` — exact vs one-character flip on `shiji-041` (deep-linked from README zh/en).

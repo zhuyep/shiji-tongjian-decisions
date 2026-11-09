@@ -8,7 +8,7 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
-No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [partner/commitment example](examples/partner-commitment-decision.zh-CN.md) · [verify-flip demo](examples/verify-flip.zh-CN.md) · [normalized_only≠exact](examples/verify-normalized.zh-CN.md) · [中文](README.md)
+No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [partner/commitment example](examples/partner-commitment-decision.zh-CN.md) · [verify-flip demo](examples/verify-flip.zh-CN.md) · [normalized_only≠exact](examples/verify-normalized.zh-CN.md) · [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) · [中文](README.md)
 
 ---
 
@@ -27,14 +27,14 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
   --id shiji-041 --quote '君行令，臣行意。'
 ```
 
-Shareable before/after (exact vs one-character flip): [verify-flip demo](examples/verify-flip.zh-CN.md). Punctuation-only / de-punctuated hits are `normalized_only`, not `exact`: [normalized_only≠exact](examples/verify-normalized.zh-CN.md).
+Shareable before/after (exact vs one-character flip): [verify-flip demo](examples/verify-flip.zh-CN.md). Punctuation-only / de-punctuated hits are `normalized_only`, not `exact`: [normalized_only≠exact](examples/verify-normalized.zh-CN.md). A real quotation bound to the wrong registered `--id` is not `exact`: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md).
 
 **Before installing:** read a [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) worked example in Chinese and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
 
 ## 30-second fit check
 
 - **Offline-checkable citations**; if a source cannot be found, state the gap—do not invent a quote.
-- Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) example, or the [verify-flip](examples/verify-flip.zh-CN.md) / [normalized_only≠exact](examples/verify-normalized.zh-CN.md) demos; more entry points in the [examples index](examples/README.md).
+- Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) example, or the [verify-flip](examples/verify-flip.zh-CN.md) / [normalized_only≠exact](examples/verify-normalized.zh-CN.md) / [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) demos; more entry points in the [examples index](examples/README.md).
 - One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 
@@ -115,11 +115,11 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 python3 -m unittest discover -s tests -v
 ```
 
-`exact` confirms a literal match in that snapshot—not historical truth or causal validity. A punctuation-normalized match remains `normalized_only` (shareable demo: [normalized_only≠exact](examples/verify-normalized.zh-CN.md)). An empty cache search does not mean the books contain no relevant cases.
+`exact` confirms a literal match in that snapshot—not historical truth or causal validity. A punctuation-normalized match remains `normalized_only` (shareable demo: [normalized_only≠exact](examples/verify-normalized.zh-CN.md)). A genuine quotation bound to a different registered ID returns `not_found` (shareable demo: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md)). An empty cache search does not mean the books contain no relevant cases.
 
 ## Scope and evidence
 
-The repository includes excerpts from three volumes, multiple public examples (promotion / job-switch / partner-commitment worked examples, plus exact and normalized_only verify demos), three structured historical cases and thirteen registered quotations. Offline tests check tool behavior, evidence records and the quotations/source links displayed in the public Markdown example; deliberate mutations test that the checks reject corruption. Six synthetic scenarios provide manual acceptance rubrics. Automated fixture checks do not run or evaluate a model, and the model-behavior regression remains unrun. One fictional scenario has a maker walkthrough. Independent evaluations, real decision outcomes and full-book retrieval coverage remain unverified.
+The repository includes excerpts from three volumes, multiple public examples (promotion / job-switch / partner-commitment worked examples, plus exact, normalized_only, and wrong-id/misbind verify demos), three structured historical cases and thirteen registered quotations. Offline tests check tool behavior, evidence records and the quotations/source links displayed in the public Markdown example; deliberate mutations test that the checks reject corruption. Six synthetic scenarios provide manual acceptance rubrics. Automated fixture checks do not run or evaluate a model, and the model-behavior regression remains unrun. One fictional scenario has a maker walkthrough. Independent evaluations, real decision outcomes and full-book retrieval coverage remain unverified.
 
 The local Python tool makes no network requests. Your AI host handles prompts and online searches according to its own settings. Redact sensitive situations before sharing. This is a reasoning aid, not a substitute for current professional evidence.
 
