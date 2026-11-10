@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Docs: discovery demo `examples/verify-second-source.zh-CN.md` — a second registered source (`shiji-055` / 「留侯行少傅事。」) also returns `exact` in the README 30s verify section (deep-linked from README zh/en, examples index, and the other verify demos).
 - Docs: discovery demo `examples/verify-wrong-id.zh-CN.md` — a genuine quotation bound to the wrong registered `--id` is not `exact` (`not_found`, exit 1; deep-linked from README zh/en, examples index, verify-flip, and verify-normalized).
 - Docs: discovery demo `examples/verify-normalized.zh-CN.md` — `normalized_only` is not `exact` (punctuation / de-punctuated hit; deep-linked from README zh/en, examples index, and verify-flip).
 - Docs: discovery worked example `examples/partner-commitment-decision.zh-CN.md` — partnership / long-term commitment paths (accept / written exit boundaries / decline with optionality); deep-linked from README zh/en and examples index.

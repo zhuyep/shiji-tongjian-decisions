@@ -14,8 +14,9 @@ Short bilingual index. Read without installing; verify quotes offline; leave one
 | [partner-commitment-decision.zh-CN.md](partner-commitment-decision.zh-CN.md) | 立刻入伙 / 先谈书面边界与退出 / 婉拒保留（虚构困境 + 真实原文） |
 | [verify-normalized.zh-CN.md](verify-normalized.zh-CN.md) | normalized_only 不是 exact（发现向：只改标点 / 去标点仍不能当逐字核验） |
 | [verify-wrong-id.zh-CN.md](verify-wrong-id.zh-CN.md) | 错绑 ID 不是 exact（发现向：原文对了、出处 ID 绑错也不能冒充已核） |
+| [verify-second-source.zh-CN.md](verify-second-source.zh-CN.md) | 第二源也能 exact（发现向：同一语料里 `shiji-055` 一键核源，证明不是单句把戏） |
 
-**Try without install · 不安装先看：** open a [promotion](promotion-decision.zh-CN.md), [job-switch](job-switch-decision.zh-CN.md), [partner-commitment](partner-commitment-decision.zh-CN.md), [verify-flip](verify-flip.zh-CN.md) (改字翻车), [verify-normalized](verify-normalized.zh-CN.md) (标点近似≠exact), or [verify-wrong-id](verify-wrong-id.zh-CN.md) (原文对、ID 错) example, pick one useful or flawed judgment, then use the [experience feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml) (choose “只看公开示例” / “Read the public example only”). Submissions are public; no personal story needed.
+**Try without install · 不安装先看：** open a [promotion](promotion-decision.zh-CN.md), [job-switch](job-switch-decision.zh-CN.md), [partner-commitment](partner-commitment-decision.zh-CN.md), [verify-flip](verify-flip.zh-CN.md) (改字翻车), [verify-normalized](verify-normalized.zh-CN.md) (标点近似≠exact), or [verify-wrong-id](verify-wrong-id.zh-CN.md) (原文对、ID 错), or [verify-second-source](verify-second-source.zh-CN.md) (第二源也能 exact) example, pick one useful or flawed judgment, then use the [experience feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml) (choose “只看公开示例” / “Read the public example only”). Submissions are public; no personal story needed.
 
 **Offline verify · 离线核验：** after cloning, use the one-liner in the [Chinese README](../README.md#离线核验一分钟上手) (`python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify …`). Exact match ≠ historical truth; gaps stay explicit.
 

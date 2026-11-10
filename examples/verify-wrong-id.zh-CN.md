@@ -50,6 +50,7 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 
 - [核源翻车→exact](verify-flip.zh-CN.md)（改一字 → 非 exact）
 - [normalized_only 不是 exact](verify-normalized.zh-CN.md)（只改标点仍不能当逐字核验）
+- [第二源也能 exact](verify-second-source.zh-CN.md)（`shiji-055` 本身也有可核引文，不是只能当反例）
 - [跳槽完整示例](job-switch-decision.zh-CN.md)（含本句「君行令，臣行意。」所在案例簇）
 - [晋升完整示例](promotion-decision.zh-CN.md)
 - [合伙/长期承诺示例](partner-commitment-decision.zh-CN.md)
