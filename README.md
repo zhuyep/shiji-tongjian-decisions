@@ -8,35 +8,44 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
-不装先看：[跳槽完整示例](examples/job-switch-decision.zh-CN.md) · [晋升完整示例](examples/promotion-decision.zh-CN.md) · [合伙/长期承诺示例](examples/partner-commitment-decision.zh-CN.md) · [核源翻车→exact](examples/verify-flip.zh-CN.md) · [normalized_only≠exact](examples/verify-normalized.zh-CN.md) · [错绑ID≠exact](examples/verify-wrong-id.zh-CN.md) · [第二源一键核源](examples/verify-second-source.zh-CN.md) · [English](README.en.md)
+不装先看：[核源翻车→exact](examples/verify-flip.zh-CN.md)（下方已贴输出，改一字就翻车）· [跳槽完整示例](examples/job-switch-decision.zh-CN.md) · [晋升完整示例](examples/promotion-decision.zh-CN.md) · [更多示例](examples/README.md) · [English](README.en.md)
 
 ---
 
 ## 30 秒核源：前后对比
 
-| 步骤 | 你会看到什么 |
-| --- | --- |
-| **前** | 助手随口抛出「出处：`shiji-041`，引文：`君行令，臣行意。`」——看起来像有据，但还没对着语料核过。 |
-| **核** | 克隆后跑仓库自带的核源命令（与[离线核验一分钟上手](#离线核验一分钟上手)相同；下方两条来自两个已登记来源）： |
-| **后** | 返回 `status: exact`（含偏移与上下文）。换到另一个已登记来源 `shiji-055` 的引文，同样是 `exact`。改一个字再跑 → 不再是 `exact`；语料里没有就明说缺口，不编造。 |
+不克隆也能先看结果。助手随口说「出处：`shiji-041`，引文：`君行令，臣行意。`」看起来像有据；对着语料核过，关键字段如下（完整输出还含上下文与来源哈希）：
 
-```bash
-python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
-  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
-  --library-id wikisource-zh-shiji-tongjian \
-  --id shiji-041 --quote '君行令，臣行意。'
+正确引文：
+
+```json
+{
+  "status": "exact",
+  "requested_quote": "君行令，臣行意。",
+  "source_quote": "君行令，臣行意。",
+  "source": {
+    "id": "shiji-041",
+    "book": "史记",
+    "volume": "卷四十一",
+    "chapter": "越王勾践世家"
+  },
+  "char_start": 308,
+  "char_end_exclusive": 316,
+  "boundary": "只校验文本一致性，不证明历史真实性、因果关系或古今适用性"
+}
 ```
 
-同一语料里换一个已登记来源，也能一键核到 `status: exact`（证明不是单句把戏）：
+把末字「意」改成「义」：
 
-```bash
-python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
-  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
-  --library-id wikisource-zh-shiji-tongjian \
-  --id shiji-055 --quote '留侯行少傅事。'
+```json
+{
+  "status": "not_found",
+  "requested_quote": "君行令，臣行义。",
+  "source_quote": null
+}
 ```
 
-可分享对照（两个已登记来源，各自 exact）：[第二源一键核源](examples/verify-second-source.zh-CN.md)。正确引文 vs 故意改一字：[核源翻车→exact](examples/verify-flip.zh-CN.md)。只改标点、去标点才命中时是 `normalized_only`，不能冒充 `exact`：[normalized_only≠exact](examples/verify-normalized.zh-CN.md)。同一句真引文绑到另一个已登记 ID 时不是 `exact`：[错绑ID≠exact](examples/verify-wrong-id.zh-CN.md)。
+`exact` 只表示和本地语料一致，不证明史实，也不证明能套用到你的处境。语料里没有就明说缺口，不编造。免克隆复现与完整对照：[核源翻车→exact](examples/verify-flip.zh-CN.md)。第二源 `shiji-055` /「留侯行少傅事。」也能 `exact`：[第二源一键核源](examples/verify-second-source.zh-CN.md)。只改标点不能冒充 `exact`：[normalized_only≠exact](examples/verify-normalized.zh-CN.md)。原文对、ID 绑错也不是 `exact`：[错绑ID≠exact](examples/verify-wrong-id.zh-CN.md)。克隆后的命令见[离线核验一分钟上手](#离线核验一分钟上手)。
 
 ## 30 秒判断值不值得
 
@@ -54,7 +63,7 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 | 类比 | 古今直接画等号 | **类比可以假**；只提可核实的现实条件 |
 | 不该用时 | 很少写清 | README 有「何时不该用」清单 |
 
-30 秒自证：克隆后分别跑上方两条核源命令（`shiji-041` 与 `shiji-055`），均应得到 `status: exact`。
+30 秒自证：上方已贴正确引文与改一字的核源输出；免克隆复现见[核源翻车→exact](examples/verify-flip.zh-CN.md)。克隆后也可跑[离线核验一分钟上手](#离线核验一分钟上手)里的两条命令（`shiji-041` 与 `shiji-055`），均应得到 `status: exact`。
 
 ## 先看一次推演
 

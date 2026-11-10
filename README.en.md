@@ -8,35 +8,44 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
-No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [partner/commitment example](examples/partner-commitment-decision.zh-CN.md) · [verify-flip demo](examples/verify-flip.zh-CN.md) · [normalized_only≠exact](examples/verify-normalized.zh-CN.md) · [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) · [second-source one-liner](examples/verify-second-source.zh-CN.md) · [中文](README.md)
+No install needed first: [verify-flip demo](examples/verify-flip.zh-CN.md) (sample output below; change one character and it fails) · [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [more examples](examples/README.md) · [中文](README.md)
 
 ---
 
 ## 30-second verify: before / after
 
-| Step | What you see |
-| --- | --- |
-| **Before** | An assistant casually cites `shiji-041` / `君行令，臣行意。`—looks sourced, but has not been checked against the local corpus. |
-| **Verify** | From a clone, run the verify commands in [Try quotation verification](#try-quotation-verification) (identical to the Chinese README offline section; the two commands below use two registered sources): |
-| **After** | Returns `status: exact` (with offset and context). The second registered source `shiji-055` also returns `exact`. Change one character → no longer `exact`. Missing from the corpus → state the gap; do not invent a quote. |
+You can see the result without cloning. An assistant casually citing `shiji-041` / `君行令，臣行意。` looks sourced; after checking the local corpus, the key fields look like this (full output also includes context and source hashes):
 
-```bash
-python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
-  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
-  --library-id wikisource-zh-shiji-tongjian \
-  --id shiji-041 --quote '君行令，臣行意。'
+A genuine quotation:
+
+```json
+{
+  "status": "exact",
+  "requested_quote": "君行令，臣行意。",
+  "source_quote": "君行令，臣行意。",
+  "source": {
+    "id": "shiji-041",
+    "book": "史记",
+    "volume": "卷四十一",
+    "chapter": "越王勾践世家"
+  },
+  "char_start": 308,
+  "char_end_exclusive": 316,
+  "boundary": "只校验文本一致性，不证明历史真实性、因果关系或古今适用性"
+}
 ```
 
-A second registered source in the same corpus also returns `status: exact` (not a one-quote trick):
+Change the last character from 意 to 义:
 
-```bash
-python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
-  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
-  --library-id wikisource-zh-shiji-tongjian \
-  --id shiji-055 --quote '留侯行少傅事。'
+```json
+{
+  "status": "not_found",
+  "requested_quote": "君行令，臣行义。",
+  "source_quote": null
+}
 ```
 
-Shareable two-source proof: [second-source one-liner](examples/verify-second-source.zh-CN.md). Exact vs one-character flip: [verify-flip demo](examples/verify-flip.zh-CN.md). Punctuation-only / de-punctuated hits are `normalized_only`, not `exact`: [normalized_only≠exact](examples/verify-normalized.zh-CN.md). A real quotation bound to the wrong registered `--id` is not `exact`: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md).
+`exact` only means the text matches the local corpus. It does not prove historical truth or that the analogy fits your situation. If the corpus has no match, the tool states the gap; it does not invent a quote. Reproduce this without cloning, and see the full contrast, in the [verify-flip demo](examples/verify-flip.zh-CN.md). A second registered source (`shiji-055` / 「留侯行少傅事。」) also returns `exact`: [second-source one-liner](examples/verify-second-source.zh-CN.md). Punctuation-only hits are `normalized_only`, not `exact`: [normalized_only≠exact](examples/verify-normalized.zh-CN.md). A real quotation bound to the wrong `--id` is not `exact`: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md). Commands after a clone are in [Try quotation verification](#try-quotation-verification).
 
 **Before installing:** read a [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) worked example in Chinese and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
 
@@ -67,7 +76,7 @@ Honest limits (analogies may fail; citations must not be invented):
 | Analogy | Past = present | **Analogy can be wrong**; only flag checkable conditions |
 | When not to use | Rarely written | Explicit “when not to use” list in the README |
 
-30-second proof: after clone, run both verify commands above (`shiji-041` and `shiji-055`) — each should return `status: exact`.
+30-second proof: the sample `exact` / `not_found` output is already shown above; reproduce it without cloning in the [verify-flip demo](examples/verify-flip.zh-CN.md). After a clone, the two commands in [Try quotation verification](#try-quotation-verification) (`shiji-041` and `shiji-055`) should each return `status: exact`.
 
 ## Install
 
