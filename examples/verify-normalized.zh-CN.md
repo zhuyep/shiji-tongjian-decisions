@@ -69,6 +69,7 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
 
 - [核源翻车→exact](verify-flip.zh-CN.md)（改一字 → 非 exact）
 - [错绑 ID 不是 exact](verify-wrong-id.zh-CN.md)（原文对了、出处 ID 绑错也不能冒充已核）
+- [第二源也能 exact](verify-second-source.zh-CN.md)（换一个已登记来源，同样能一键核到 exact）
 - [跳槽完整示例](job-switch-decision.zh-CN.md)
 - [晋升完整示例](promotion-decision.zh-CN.md)
 - [合伙/长期承诺示例](partner-commitment-decision.zh-CN.md)

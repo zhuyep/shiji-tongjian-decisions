@@ -8,7 +8,7 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
-No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [partner/commitment example](examples/partner-commitment-decision.zh-CN.md) · [verify-flip demo](examples/verify-flip.zh-CN.md) · [normalized_only≠exact](examples/verify-normalized.zh-CN.md) · [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) · [中文](README.md)
+No install needed first: [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [partner/commitment example](examples/partner-commitment-decision.zh-CN.md) · [verify-flip demo](examples/verify-flip.zh-CN.md) · [normalized_only≠exact](examples/verify-normalized.zh-CN.md) · [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) · [second-source one-liner](examples/verify-second-source.zh-CN.md) · [中文](README.md)
 
 ---
 
@@ -17,8 +17,8 @@ No install needed first: [job-switch example](examples/job-switch-decision.zh-CN
 | Step | What you see |
 | --- | --- |
 | **Before** | An assistant casually cites `shiji-041` / `君行令，臣行意。`—looks sourced, but has not been checked against the local corpus. |
-| **Verify** | From a clone, run the same one-liner as in [Try quotation verification](#try-quotation-verification) (identical to the Chinese README offline section): |
-| **After** | Returns `status: exact` (with offset and context). Change one character → no longer `exact`. Missing from the corpus → state the gap; do not invent a quote. |
+| **Verify** | From a clone, run the verify commands in [Try quotation verification](#try-quotation-verification) (identical to the Chinese README offline section; the two commands below use two registered sources): |
+| **After** | Returns `status: exact` (with offset and context). The second registered source `shiji-055` also returns `exact`. Change one character → no longer `exact`. Missing from the corpus → state the gap; do not invent a quote. |
 
 ```bash
 python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
@@ -27,14 +27,23 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
   --id shiji-041 --quote '君行令，臣行意。'
 ```
 
-Shareable before/after (exact vs one-character flip): [verify-flip demo](examples/verify-flip.zh-CN.md). Punctuation-only / de-punctuated hits are `normalized_only`, not `exact`: [normalized_only≠exact](examples/verify-normalized.zh-CN.md). A real quotation bound to the wrong registered `--id` is not `exact`: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md).
+A second registered source in the same corpus also returns `status: exact` (not a one-quote trick):
+
+```bash
+python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
+  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
+  --library-id wikisource-zh-shiji-tongjian \
+  --id shiji-055 --quote '留侯行少傅事。'
+```
+
+Shareable two-source proof: [second-source one-liner](examples/verify-second-source.zh-CN.md). Exact vs one-character flip: [verify-flip demo](examples/verify-flip.zh-CN.md). Punctuation-only / de-punctuated hits are `normalized_only`, not `exact`: [normalized_only≠exact](examples/verify-normalized.zh-CN.md). A real quotation bound to the wrong registered `--id` is not `exact`: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md).
 
 **Before installing:** read a [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) worked example in Chinese and identify one useful or flawed point in the [feedback form](https://github.com/zhuyep/shiji-tongjian-decisions/issues/new?template=experience.yml). Choose “Read the public example only.” No personal story is needed; submissions are public. Reading an example and actually running the skill are recorded separately.
 
 ## 30-second fit check
 
 - **Offline-checkable citations**; if a source cannot be found, state the gap—do not invent a quote.
-- Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) example, or the [verify-flip](examples/verify-flip.zh-CN.md) / [normalized_only≠exact](examples/verify-normalized.zh-CN.md) / [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) demos; more entry points in the [examples index](examples/README.md).
+- Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) example, or the [verify-flip](examples/verify-flip.zh-CN.md) / [normalized_only≠exact](examples/verify-normalized.zh-CN.md) / [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) / [second-source one-liner](examples/verify-second-source.zh-CN.md) demos; more entry points in the [examples index](examples/README.md).
 - One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
 
 
@@ -58,7 +67,7 @@ Honest limits (analogies may fail; citations must not be invented):
 | Analogy | Past = present | **Analogy can be wrong**; only flag checkable conditions |
 | When not to use | Rarely written | Explicit “when not to use” list in the README |
 
-30-second proof: after clone, run the verify command above — expect `status: exact`.
+30-second proof: after clone, run both verify commands above (`shiji-041` and `shiji-055`) — each should return `status: exact`.
 
 ## Install
 
@@ -112,14 +121,19 @@ python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
   --library-id wikisource-zh-shiji-tongjian \
   --id shiji-041 --quote '君行令，臣行意。'
 
+python3 skills/shiji-tongjian-decisions/scripts/corpus.py verify \
+  --corpus skills/shiji-tongjian-decisions/references/sample-corpus \
+  --library-id wikisource-zh-shiji-tongjian \
+  --id shiji-055 --quote '留侯行少傅事。'
+
 python3 -m unittest discover -s tests -v
 ```
 
-`exact` confirms a literal match in that snapshot—not historical truth or causal validity. A punctuation-normalized match remains `normalized_only` (shareable demo: [normalized_only≠exact](examples/verify-normalized.zh-CN.md)). A genuine quotation bound to a different registered ID returns `not_found` (shareable demo: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md)). An empty cache search does not mean the books contain no relevant cases.
+Both commands should return `status: exact` (shareable demo: [second-source one-liner](examples/verify-second-source.zh-CN.md)). `exact` confirms a literal match in that snapshot—not historical truth or causal validity. A punctuation-normalized match remains `normalized_only` (shareable demo: [normalized_only≠exact](examples/verify-normalized.zh-CN.md)). A genuine quotation bound to a different registered ID returns `not_found` (shareable demo: [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md)). An empty cache search does not mean the books contain no relevant cases.
 
 ## Scope and evidence
 
-The repository includes excerpts from three volumes, multiple public examples (promotion / job-switch / partner-commitment worked examples, plus exact, normalized_only, and wrong-id/misbind verify demos), three structured historical cases and thirteen registered quotations. Offline tests check tool behavior, evidence records and the quotations/source links displayed in the public Markdown example; deliberate mutations test that the checks reject corruption. Six synthetic scenarios provide manual acceptance rubrics. Automated fixture checks do not run or evaluate a model, and the model-behavior regression remains unrun. One fictional scenario has a maker walkthrough. Independent evaluations, real decision outcomes and full-book retrieval coverage remain unverified.
+The repository includes excerpts from three volumes, multiple public examples (promotion / job-switch / partner-commitment worked examples, plus exact, normalized_only, wrong-id/misbind, and second-source one-liner verify demos), three structured historical cases and thirteen registered quotations. Offline tests check tool behavior, evidence records and the quotations/source links displayed in the public Markdown example; deliberate mutations test that the checks reject corruption. Six synthetic scenarios provide manual acceptance rubrics. Automated fixture checks do not run or evaluate a model, and the model-behavior regression remains unrun. One fictional scenario has a maker walkthrough. Independent evaluations, real decision outcomes and full-book retrieval coverage remain unverified.
 
 The local Python tool makes no network requests. Your AI host handles prompts and online searches according to its own settings. Redact sensitive situations before sharing. This is a reasoning aid, not a substitute for current professional evidence.
 
