@@ -8,6 +8,12 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
+On Cursor 2.5+, you can also install directly from this repo in an Agent chat (not yet on the official Marketplace; the command may not appear in autocomplete, so type it in full):
+
+```text
+/add-plugin shiji-tongjian-decisions@https://github.com/zhuyep/shiji-tongjian-decisions
+```
+
 No install needed first: [verify-flip demo](examples/verify-flip.zh-CN.md) (sample output below; change one character and it fails) · [job-switch example](examples/job-switch-decision.zh-CN.md) · [promotion example](examples/promotion-decision.zh-CN.md) · [more examples](examples/README.md) · [中文](README.md)
 
 ---
@@ -53,7 +59,7 @@ Change the last character from 意 to 义:
 
 - **Offline-checkable citations**; if a source cannot be found, state the gap—do not invent a quote.
 - Try without installing: read the [promotion](examples/promotion-decision.zh-CN.md), [job-switch](examples/job-switch-decision.zh-CN.md), or [partner/commitment](examples/partner-commitment-decision.zh-CN.md) example, or the [verify-flip](examples/verify-flip.zh-CN.md) / [normalized_only≠exact](examples/verify-normalized.zh-CN.md) / [wrong-id / misbind](examples/verify-wrong-id.zh-CN.md) / [second-source one-liner](examples/verify-second-source.zh-CN.md) demos; more entry points in the [examples index](examples/README.md).
-- One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
+- One-line install when ready: `npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`. On Cursor 2.5+, you can also use `/add-plugin shiji-tongjian-decisions@https://github.com/zhuyep/shiji-tongjian-decisions` (not yet on the official Marketplace).
 
 
 ## When not to use this skill
@@ -85,6 +91,14 @@ npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
 For Codex, append `--agent codex`. The host must support Agent Skills; new online cases require its search or browser tools. The installer uses Node.js. The optional local quotation tool requires Python 3.10+ and no third-party Python packages.
+
+On Cursor 2.5+, this repo already ships `.cursor-plugin/plugin.json` with the skill under `skills/shiji-tongjian-decisions/`. In a new Agent chat, type the following command in full to install from GitHub. It is not yet listed on the official [Cursor Marketplace](https://cursor.com/marketplace), and the command may not appear in autocomplete:
+
+```text
+/add-plugin shiji-tongjian-decisions@https://github.com/zhuyep/shiji-tongjian-decisions
+```
+
+After it installs, the skill should appear under Customize in the sidebar. The `npx skills add` command above still works.
 
 After installation, paste this fictional scenario into your assistant. You do not need to share a personal decision to try the skill:
 
