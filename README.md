@@ -8,6 +8,12 @@
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
 
+Cursor 2.5+ 也可在 Agent 聊天里直接从本仓安装（尚未上官方 Marketplace；自动补全可能没有这条命令，请整行输入）：
+
+```text
+/add-plugin shiji-tongjian-decisions@https://github.com/zhuyep/shiji-tongjian-decisions
+```
+
 不装先看：[核源翻车→exact](examples/verify-flip.zh-CN.md)（下方已贴输出，改一字就翻车）· [跳槽完整示例](examples/job-switch-decision.zh-CN.md) · [晋升完整示例](examples/promotion-decision.zh-CN.md) · [更多示例](examples/README.md) · [English](README.en.md)
 
 ---
@@ -51,7 +57,7 @@ npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 
 - **引文可离线核验**；找不到出处就明说缺口，不编造引文。
 - 不安装也能先读[晋升](examples/promotion-decision.zh-CN.md)、[跳槽](examples/job-switch-decision.zh-CN.md)或[合伙/长期承诺](examples/partner-commitment-decision.zh-CN.md)完整示例，或看[核源翻车](examples/verify-flip.zh-CN.md) / [normalized_only≠exact](examples/verify-normalized.zh-CN.md) / [错绑ID≠exact](examples/verify-wrong-id.zh-CN.md) / [第二源一键核源](examples/verify-second-source.zh-CN.md)；入口见[示例索引](examples/README.md)。
-- 需要时一行安装：`npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`
+- 需要时一行安装：`npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions`；Cursor 2.5+ 也可用 `/add-plugin shiji-tongjian-decisions@https://github.com/zhuyep/shiji-tongjian-decisions`（尚未上官方 Marketplace）。
 
 
 ## 和其他「历史智慧」有什么不同
@@ -103,6 +109,14 @@ npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```bash
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions --agent codex
 ```
+
+Cursor 2.5+（本仓已有 `.cursor-plugin/plugin.json`，技能在 `skills/shiji-tongjian-decisions/`）可在新的 Agent 聊天里整行输入下面这条命令，从 GitHub 直接安装；它尚未出现在官方 [Cursor Marketplace](https://cursor.com/marketplace)，自动补全也可能搜不到这条命令：
+
+```text
+/add-plugin shiji-tongjian-decisions@https://github.com/zhuyep/shiji-tongjian-decisions
+```
+
+装好后，在侧栏 Customize 里应能看到史鉴技能。也可继续用上面的 `npx skills add`。
 
 完成安装后，可以直接复制下面的虚构场景到助手，不必先整理自己的私人问题：
 

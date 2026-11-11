@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Docs: Cursor 2.5+ install path is now on the README first screen and in the Install section (`/add-plugin shiji-tongjian-decisions@https://github.com/zhuyep/shiji-tongjian-decisions`); the repo already shipped `.cursor-plugin/plugin.json`, but the path was undocumented. Not listed on the official Cursor Marketplace.
 - Docs: README 30s verify now shows the measured `exact` / `not_found` JSON (change one character and it fails) so the hook is visible without cloning; no-clone reproduction lives in `examples/verify-flip.zh-CN.md`.
 - Docs: discovery demo `examples/verify-second-source.zh-CN.md` — a second registered source (`shiji-055` / 「留侯行少傅事。」) also returns `exact` in the README 30s verify section (deep-linked from README zh/en, examples index, and the other verify demos).
 - Docs: discovery demo `examples/verify-wrong-id.zh-CN.md` — a genuine quotation bound to the wrong registered `--id` is not `exact` (`not_found`, exit 1; deep-linked from README zh/en, examples index, verify-flip, and verify-normalized).
