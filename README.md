@@ -4,6 +4,8 @@
 
 **类比可以假，引文不能假。** 把跳槽/晋升放回《史记》《资治通鉴》比路径与代价；语料引文可离线核验。
 
+[![核源对照：原文「君行令，臣行意。」为 exact；改一字「义」则为 not_found](docs/hero-verify-flip.png)](examples/verify-flip.zh-CN.md)
+
 ```bash
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```

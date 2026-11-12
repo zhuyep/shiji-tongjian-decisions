@@ -4,6 +4,8 @@
 
 **Analogy can be wrong; citations cannot.** Map career stay/leave choices onto *Shiji* / *Zizhi Tongjian* paths and costs; quotes are offline-verifiable.
 
+[![Verify contrast: the genuine quote is exact; changing one character returns not_found](docs/hero-verify-flip.png)](examples/verify-flip.zh-CN.md)
+
 ```bash
 npx skills add zhuyep/shiji-tongjian-decisions --skill shiji-tongjian-decisions
 ```
